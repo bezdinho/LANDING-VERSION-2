@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    document.documentElement.classList.add("js");
+    // ?cap=1 — compact mode: drops the hero min-height so full-page
+    // screenshot captures aren't dominated by 100vh of hero.
+    // No-op for real visitors.
+    if (/[?&]cap=1/.test(location.search)) {
+      document.documentElement.classList.add("cap");
+    }
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <title>Partido — Football in your city. Without the WhatsApp chaos.</title>
+  <meta name="description" content="Partido is the community-first football app for Morocco. Find matches, fill missing spots, organize games, and build your football network — all in one place." />
+  <link rel="icon" type="image/png" href="assets/landing/logos/icon.png" />
+  <link rel="apple-touch-icon" href="assets/landing/logos/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Host+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/landing/styles.css" />
+</head>
+<body>
+  <!-- =========================================================
+       NAV
+  ========================================================== -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top" aria-label="Partido home">
+        <img src="assets/landing/logos/logo-color-dark.svg" alt="Partido Sports" />
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#players">Players</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#community">Community</a>
+        <a href="#tournaments">Tournaments</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="#download" class="btn btn--ghost-dark btn--sm">
+          <span>Get the app</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__pitch"></div>
+      <div class="hero__glow hero__glow--a"></div>
+      <div class="hero__glow hero__glow--b"></div>
+      <div class="hero__noise"></div>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <div class="eyebrow reveal">
+          <span class="eyebrow__dot"></span>
+          Launching across Morocco
+          <span class="eyebrow__sep">·</span>
+          2026
+        </div>
+
+        <h1 class="hero__title reveal" style="--d:.05s">
+          Football in your city,<br />
+          without the
+          <span class="title-italic">WhatsApp chaos.</span>
+        </h1>
+
+        <p class="hero__sub reveal" style="--d:.15s">
+          Partido is where amateur players find matches, fill missing spots,
+          and organize games across Morocco — all in one place. Less messy group
+          chats. More minutes on the pitch.
+        </p>
+
+        <div class="hero__ctas reveal" style="--d:.25s">
+          <a href="#download" class="btn btn--primary">
+            <span>Get the app</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#players" class="btn btn--ghost-dark">
+            <span>See how it works</span>
+          </a>
+        </div>
+
+        <div class="hero__stores reveal" style="--d:.35s">
+          <a class="store" href="#download" aria-label="Download on the App Store">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.36 12.86c.02 2.43 2.13 3.23 2.15 3.24-.02.06-.34 1.17-1.13 2.31-.68.99-1.39 1.97-2.5 1.99-1.1.02-1.45-.65-2.7-.65-1.26 0-1.64.63-2.68.67-1.08.04-1.9-1.07-2.58-2.05-1.4-2.02-2.47-5.72-1.03-8.22.71-1.24 1.99-2.02 3.38-2.04 1.05-.02 2.05.71 2.7.71.65 0 1.86-.88 3.14-.75.54.02 2.04.22 3 1.64-.08.05-1.8 1.05-1.75 3.15Zm-2.06-6.16c.57-.69.96-1.65.85-2.6-.83.03-1.82.55-2.42 1.24-.53.6-.99 1.58-.87 2.51.92.07 1.86-.47 2.44-1.15Z"/></svg>
+            <span class="store__tiny">Download on the</span>
+            <span class="store__big">App Store</span>
+          </a>
+          <a class="store" href="#download" aria-label="Get it on Google Play">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3.6 2.4c-.37.37-.6.94-.6 1.67v15.86c0 .73.23 1.3.6 1.67l.09.08L12 13.36v-.04L3.69 2.33l-.09.07ZM16 9.31 13 12l3 2.69 3.42-1.94c.97-.55.97-1.45 0-2l-3.42-1.44Zm-3.6 2.69L4.46 20l8.01-8Zm0-.01L4.46 4l7.94 8.01Z"/></svg>
+            <span class="store__tiny">GET IT ON</span>
+            <span class="store__big">Google Play</span>
+          </a>
+        </div>
+
+        <!-- mini scoreboard -->
+        <div class="scoreboard reveal" style="--d:.45s" aria-hidden="true">
+          <div class="sb__cell">
+            <div class="sb__num">12</div>
+            <div class="sb__label">cities live</div>
+          </div>
+          <div class="sb__sep"></div>
+          <div class="sb__cell">
+            <div class="sb__num">6v6<span class="sb__mid">→</span>11v11</div>
+            <div class="sb__label">formats</div>
+          </div>
+          <div class="sb__sep"></div>
+          <div class="sb__cell">
+            <div class="sb__num">~45s</div>
+            <div class="sb__label">avg join time</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__stage" aria-hidden="true">
+        <div class="hero__phone hero__phone--back">
+          <img src="assets/landing/mockups/home-next-games.png" alt="" />
+        </div>
+        <div class="hero__phone hero__phone--front">
+          <img src="assets/landing/mockups/welcome.png" alt="" />
+        </div>
+
+        <div class="hero__chip hero__chip--1" style="--d:.6s">
+          <span class="chip__dot"></span>
+          <span>4 spots left · Casablanca</span>
+        </div>
+        <div class="hero__chip hero__chip--2" style="--d:.75s">
+          <span class="chip__kbd">+1</span>
+          <span>you’re in the match</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marquee of Moroccan cities -->
+    <div class="cities" aria-hidden="true">
+      <div class="cities__track">
+        <div class="cities__group">
+          <span>Casablanca</span><span class="dot">●</span>
+          <span>Rabat</span><span class="dot">●</span>
+          <span>Marrakech</span><span class="dot">●</span>
+          <span>Agadir</span><span class="dot">●</span>
+          <span>Tanger</span><span class="dot">●</span>
+          <span>Fès</span><span class="dot">●</span>
+          <span>Kenitra</span><span class="dot">●</span>
+          <span>Tetouan</span><span class="dot">●</span>
+          <span>Oujda</span><span class="dot">●</span>
+          <span>Meknès</span><span class="dot">●</span>
+          <span>El Jadida</span><span class="dot">●</span>
+          <span>Safi</span><span class="dot">●</span>
+        </div>
+        <div class="cities__group" aria-hidden="true">
+          <span>Casablanca</span><span class="dot">●</span>
+          <span>Rabat</span><span class="dot">●</span>
+          <span>Marrakech</span><span class="dot">●</span>
+          <span>Agadir</span><span class="dot">●</span>
+          <span>Tanger</span><span class="dot">●</span>
+          <span>Fès</span><span class="dot">●</span>
+          <span>Kenitra</span><span class="dot">●</span>
+          <span>Tetouan</span><span class="dot">●</span>
+          <span>Oujda</span><span class="dot">●</span>
+          <span>Meknès</span><span class="dot">●</span>
+          <span>El Jadida</span><span class="dot">●</span>
+          <span>Safi</span><span class="dot">●</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PLAYERS
+  ========================================================== -->
+  <section class="players section" id="players">
+    <div class="section__head">
+      <div class="eyebrow eyebrow--light reveal">
+        <span class="eyebrow__kbd">01</span>
+        For Players
+      </div>
+      <h2 class="h-display reveal" style="--d:.05s">
+        Find a match. <span class="h-italic">Lace up.</span> Play.
+      </h2>
+      <p class="section__sub reveal" style="--d:.1s">
+        Three taps from your couch to the pitch. No chasing organizers,
+        no endless group chats, no “I’ll confirm later.”
+      </p>
+    </div>
+
+    <div class="journey">
+      <article class="journey__step reveal">
+        <div class="journey__num">01</div>
+        <div class="journey__phone">
+          <img src="assets/landing/mockups/match-list.png" alt="Partido match list" />
+        </div>
+        <h3>Discover matches near you</h3>
+        <p>Browse open games in your city — filtered by level, format, neighborhood, and kickoff time. Public, private, friendly, serious.</p>
+      </article>
+
+      <article class="journey__step reveal" style="--d:.1s">
+        <div class="journey__num">02</div>
+        <div class="journey__phone">
+          <img src="assets/landing/mockups/join-match.png" alt="Join a match flow" />
+        </div>
+        <h3>Join in one tap</h3>
+        <p>See who’s playing, the level, the price, and the spot. Confirm in seconds. If it’s full, jump on the waitlist.</p>
+      </article>
+
+      <article class="journey__step reveal" style="--d:.2s">
+        <div class="journey__num">03</div>
+        <div class="journey__phone">
+          <img src="assets/landing/mockups/match-details.png" alt="Match details" />
+        </div>
+        <h3>Show up and play</h3>
+        <p>Full match details, location, chat, and teammates in your pocket. When the whistle blows, everyone knows the plan.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ORGANIZERS
+  ========================================================== -->
+  <section class="organizers section section--paper" id="organizers">
+    <div class="section__head section__head--split">
+      <div>
+        <div class="eyebrow eyebrow--light reveal">
+          <span class="eyebrow__kbd">02</span>
+          For Organizers
+        </div>
+        <h2 class="h-display reveal" style="--d:.05s">
+          Your match. <br />
+          <span class="h-italic">Finally organized.</span>
+        </h2>
+      </div>
+      <p class="section__sub section__sub--right reveal" style="--d:.1s">
+        Stop herding cats in six WhatsApp groups. Create a match in under a
+        minute, invite your crew, and let Partido fill the missing spots with
+        vetted players nearby.
+      </p>
+    </div>
+
+    <div class="org">
+      <div class="org__visual reveal">
+        <div class="org__phone org__phone--main">
+          <img src="assets/landing/mockups/chat-list.png" alt="Match chat list" />
+        </div>
+        <div class="org__phone org__phone--side">
+          <img src="assets/landing/mockups/match-single.png" alt="Match management" />
+        </div>
+        <div class="org__glow" aria-hidden="true"></div>
+      </div>
+
+      <ul class="checkmarks">
+        <li class="reveal" style="--d:.05s">
+          <span class="check"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5 7 12l6-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Create a match in under a minute</h4>
+            <p>Pick the pitch, format, level, price-per-head, and kickoff. Publish it public or keep it private to your friends.</p>
+          </div>
+        </li>
+        <li class="reveal" style="--d:.1s">
+          <span class="check"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5 7 12l6-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Auto-fill the missing spots</h4>
+            <p>Two players short? Partido surfaces your match to nearby players of the right level — so you never cancel a game again.</p>
+          </div>
+        </li>
+        <li class="reveal" style="--d:.15s">
+          <span class="check"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5 7 12l6-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Manage the roster, not the drama</h4>
+            <p>Approvals, waitlists, reminders, payment tracking, cancellations — all in one place, with notifications that actually land.</p>
+          </div>
+        </li>
+        <li class="reveal" style="--d:.2s">
+          <span class="check"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5 7 12l6-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>One chat per match</h4>
+            <p>A dedicated group chat spins up automatically. When the match ends, it archives itself. No more phantom Thursday-night groups.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       COMMUNITY-FIRST  /  DIFFERENTIATION
+  ========================================================== -->
+  <section class="community section section--ink" id="community">
+    <div class="section__head section__head--center">
+      <div class="eyebrow reveal">
+        <span class="eyebrow__kbd">03</span>
+        Community-first
+      </div>
+      <h2 class="h-display reveal" style="--d:.05s">
+        Built for the community. <br />
+        <span class="h-italic">Not the calendar.</span>
+      </h2>
+      <p class="section__sub section__sub--center reveal" style="--d:.1s">
+        Partido isn’t a field-booking app. It’s where your football
+        network actually lives — the players you trust, the matches you love,
+        the crews you meet along the way.
+      </p>
+    </div>
+
+    <div class="compare">
+      <article class="compare__col compare__col--before reveal">
+        <header>
+          <span class="compare__tag">Before Partido</span>
+          <h3>The WhatsApp way</h3>
+        </header>
+        <ul>
+          <li>14 group chats. 3 active.</li>
+          <li>“Who’s in?” every Tuesday.</li>
+          <li>Last-minute no-shows. Cancelled matches.</li>
+          <li>No way to meet new players outside your circle.</li>
+          <li>Zero memory — no profiles, no history, no reviews.</li>
+        </ul>
+        <div class="compare__fake">
+          <div class="fake-msg fake-msg--left"><b>Karim</b> Guys who’s coming tomorrow?</div>
+          <div class="fake-msg fake-msg--left"><b>Youssef</b> In shaa Allah</div>
+          <div class="fake-msg fake-msg--left"><b>Amine</b> ?</div>
+          <div class="fake-msg fake-msg--right">me too maybe</div>
+          <div class="fake-msg fake-msg--left"><b>Karim</b> we need 3 more</div>
+          <div class="fake-msg fake-msg--left"><b>Karim</b> ?????</div>
+        </div>
+      </article>
+
+      <div class="compare__arrow" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M10 24h28M28 14l10 10-10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </div>
+
+      <article class="compare__col compare__col--after reveal" style="--d:.1s">
+        <header>
+          <span class="compare__tag compare__tag--green">With Partido</span>
+          <h3>One football home</h3>
+        </header>
+        <ul>
+          <li>One feed of matches in your city.</li>
+          <li>Profiles, stats, reviews — know who you’re playing with.</li>
+          <li>Missing spots auto-filled by nearby players.</li>
+          <li>Match chat spins up on its own. Archives itself after.</li>
+          <li>Your football network grows every week.</li>
+        </ul>
+        <div class="compare__phone">
+          <img src="assets/landing/mockups/profile-connections.png" alt="Player connections" />
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FEATURE HIGHLIGHTS (BENTO)
+  ========================================================== -->
+  <section class="features section" id="features">
+    <div class="section__head">
+      <div class="eyebrow eyebrow--light reveal">
+        <span class="eyebrow__kbd">04</span>
+        Features
+      </div>
+      <h2 class="h-display reveal" style="--d:.05s">
+        Everything you need,<br />
+        <span class="h-italic">on and off the pitch.</span>
+      </h2>
+    </div>
+
+    <div class="bento">
+      <!-- Big feature: Find nearby matches (with home-next-games mockup) -->
+      <article class="card card--xl card--green reveal">
+        <div class="card__head">
+          <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s-7-6.5-7-12a7 7 0 1 1 14 0c0 5.5-7 12-7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <h3>Find nearby matches</h3>
+          <p>See every open match around you — neighborhood, level, kickoff time, open spots. Filter in, join out.</p>
+        </div>
+        <div class="card__phone">
+          <img src="assets/landing/mockups/home-next-games.png" alt="" />
+        </div>
+      </article>
+
+      <!-- Join fast -->
+      <article class="card card--md reveal" style="--d:.05s">
+        <span class="card__icon card__icon--outline"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 3 4 14h7l-1 7 9-11h-7l1-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <h3>Join in seconds</h3>
+        <p>One tap confirms your spot. Waitlist auto-promotes if someone drops.</p>
+      </article>
+
+      <!-- Match chat -->
+      <article class="card card--md reveal" style="--d:.1s">
+        <span class="card__icon card__icon--outline"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <h3>Per-match chat</h3>
+        <p>A dedicated chat for every game. Archives itself after full-time.</p>
+      </article>
+
+      <!-- Profiles -->
+      <article class="card card--md reveal" style="--d:.15s">
+        <span class="card__icon card__icon--outline"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Player profiles</h3>
+        <p>Matches played, positions, reputation, reviews. Know your teammates.</p>
+      </article>
+
+      <!-- Alerts -->
+      <article class="card card--md reveal" style="--d:.2s">
+        <span class="card__icon card__icon--outline"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 17h12l-1.5-2V11a4.5 4.5 0 0 0-9 0v4L6 17Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 20a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Smart alerts</h3>
+        <p>Pings when a match near you needs one more player at your level.</p>
+      </article>
+
+      <!-- History card feature -->
+      <article class="card card--lg card--dark reveal" style="--d:.25s">
+        <div class="card__head">
+          <span class="card__icon card__icon--solid"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg></span>
+          <h3>Your football memory</h3>
+          <p>Past games, stats, trophies, connections — your whole amateur career, archived and searchable.</p>
+        </div>
+        <div class="card__phone card__phone--tall">
+          <img src="assets/landing/mockups/profile-main.png" alt="" />
+        </div>
+      </article>
+
+      <!-- Missing spot feature (featured) -->
+      <article class="card card--wide reveal" style="--d:.3s">
+        <span class="card__pill">The Partido difference</span>
+        <h3>Fill the missing spot, automatically.</h3>
+        <p>Two players short an hour before kickoff? Partido surfaces your match to nearby players at the right level — matched by neighborhood, skill, and availability. No more cancelled games.</p>
+        <div class="minimatch" aria-hidden="true">
+          <div class="slot">GK</div>
+          <div class="slot">DEF</div>
+          <div class="slot">DEF</div>
+          <div class="slot slot--open">+1</div>
+          <div class="slot">MID</div>
+          <div class="slot">MID</div>
+          <div class="slot slot--open">+1</div>
+          <div class="slot">FWD</div>
+          <div class="slot">FWD</div>
+          <div class="slot">FWD</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TOURNAMENTS
+  ========================================================== -->
+  <section class="tournaments section section--ink" id="tournaments">
+    <div class="tour">
+      <div class="tour__copy">
+        <div class="eyebrow reveal">
+          <span class="eyebrow__kbd">05</span>
+          Tournaments
+        </div>
+        <h2 class="h-display reveal" style="--d:.05s">
+          Al Kass Partido. <br />
+          <span class="h-italic">Coming soon.</span>
+        </h2>
+        <p class="section__sub reveal" style="--d:.1s">
+          A city-to-city amateur football championship, built on the Partido
+          community. Crews, qualifiers, finals. Medals, prizes, bragging rights
+          that last a year — and a story your grandkids will hear about.
+        </p>
+
+        <ul class="tour__bullets">
+          <li class="reveal" style="--d:.15s"><span>◉</span> Qualifying rounds in 12+ Moroccan cities</li>
+          <li class="reveal" style="--d:.2s"><span>◉</span> Cash prizes up to 100,000 DHS</li>
+          <li class="reveal" style="--d:.25s"><span>◉</span> Broadcast match recaps & player of the match</li>
+          <li class="reveal" style="--d:.3s"><span>◉</span> Official medals, jerseys & certificates</li>
+        </ul>
+
+        <div class="tour__cta reveal" style="--d:.35s">
+          <a href="#download" class="btn btn--primary">Join the waitlist</a>
+          <span class="tour__note">Open to all amateur crews · No pro licence required</span>
+        </div>
+      </div>
+
+      <div class="tour__stage" aria-hidden="true">
+        <div class="tour__phone reveal">
+          <img src="assets/landing/mockups/tournament.png" alt="Tournament page" />
+        </div>
+        <div class="tour__trophy" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="72" height="72">
+            <defs>
+              <linearGradient id="tg" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#D6F24E"/>
+                <stop offset=".5" stop-color="#99CA3C"/>
+                <stop offset="1" stop-color="#5AA339"/>
+              </linearGradient>
+            </defs>
+            <path d="M18 6h28v10c0 7-5 13-14 13S18 23 18 16V6Z" fill="url(#tg)"/>
+            <path d="M14 10H8a6 6 0 0 0 10 6M50 10h6a6 6 0 0 1-10 6" stroke="url(#tg)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="26" y="29" width="12" height="10" fill="url(#tg)"/>
+            <rect x="18" y="40" width="28" height="6" rx="2" fill="url(#tg)"/>
+            <rect x="14" y="48" width="36" height="8" rx="3" fill="url(#tg)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TRUST / TESTIMONIALS
+  ========================================================== -->
+  <section class="trust section" id="testimonials">
+    <div class="section__head">
+      <div class="eyebrow eyebrow--light reveal">
+        <span class="eyebrow__kbd">06</span>
+        From the first players
+      </div>
+      <h2 class="h-display reveal" style="--d:.05s">
+        Football, <span class="h-italic">the way we play it.</span>
+      </h2>
+    </div>
+
+    <div class="quotes">
+      <figure class="quote quote--a reveal">
+        <blockquote>
+          “Our Wednesday match used to cancel every other week. Since Partido,
+          we haven’t missed one — spots fill themselves.”
+        </blockquote>
+        <figcaption>
+          <span class="avatar" style="--bg:#D6F24E">Y</span>
+          <div>
+            <b>Younes B.</b>
+            <span>Organizer · Casablanca · 6v6</span>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="quote quote--b reveal" style="--d:.1s">
+        <blockquote>
+          “Moved to Rabat for work. Within a week I was playing twice a week
+          with people I’d never have met otherwise.”
+        </blockquote>
+        <figcaption>
+          <span class="avatar" style="--bg:#111">H</span>
+          <div>
+            <b>Hamza EL M.</b>
+            <span>Player · Rabat · Intermediate</span>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="quote quote--c reveal" style="--d:.2s">
+        <blockquote>
+          “Finally a place for amateur football that doesn’t feel like a
+          booking platform. It feels like a community.”
+        </blockquote>
+        <figcaption>
+          <span class="avatar" style="--bg:#fff;color:#111">O</span>
+          <div>
+            <b>Othmane B.</b>
+            <span>Player · Agadir · Advanced</span>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="quote quote--d reveal" style="--d:.3s">
+        <blockquote>
+          “The match chat + auto-archive alone is worth it. My phone is
+          finally quiet on Sundays.”
+        </blockquote>
+        <figcaption>
+          <span class="avatar" style="--bg:#99CA3C">A</span>
+          <div>
+            <b>Anas S.</b>
+            <span>Organizer · Marrakech · 7v7</span>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- small "by the numbers" band -->
+    <div class="bynum">
+      <div class="bynum__item reveal"><b>12+</b><span>cities at launch</span></div>
+      <div class="bynum__item reveal" style="--d:.05s"><b>6v6 → 11v11</b><span>every format</span></div>
+      <div class="bynum__item reveal" style="--d:.1s"><b>&lt;60s</b><span>to create a match</span></div>
+      <div class="bynum__item reveal" style="--d:.15s"><b>0</b><span>ghost group chats</span></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FINAL CTA
+  ========================================================== -->
+  <section class="finalcta section section--ink" id="download">
+    <div class="finalcta__bg" aria-hidden="true">
+      <div class="finalcta__glow"></div>
+      <div class="finalcta__pitch"></div>
+    </div>
+
+    <div class="finalcta__inner">
+      <div class="eyebrow reveal">
+        <span class="eyebrow__dot"></span>
+        Kickoff in T-minus…
+      </div>
+      <h2 class="h-hero reveal" style="--d:.05s">
+        Your next match is <br />
+        <span class="h-italic">one tap away.</span>
+      </h2>
+      <p class="finalcta__sub reveal" style="--d:.1s">
+        Download Partido. Find your game tonight. Play football the way it’s
+        meant to be played — with your neighborhood, your city, your people.
+      </p>
+
+      <div class="finalcta__stores reveal" style="--d:.2s">
+        <a href="#" class="store store--big">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M16.36 12.86c.02 2.43 2.13 3.23 2.15 3.24-.02.06-.34 1.17-1.13 2.31-.68.99-1.39 1.97-2.5 1.99-1.1.02-1.45-.65-2.7-.65-1.26 0-1.64.63-2.68.67-1.08.04-1.9-1.07-2.58-2.05-1.4-2.02-2.47-5.72-1.03-8.22.71-1.24 1.99-2.02 3.38-2.04 1.05-.02 2.05.71 2.7.71.65 0 1.86-.88 3.14-.75.54.02 2.04.22 3 1.64-.08.05-1.8 1.05-1.75 3.15Zm-2.06-6.16c.57-.69.96-1.65.85-2.6-.83.03-1.82.55-2.42 1.24-.53.6-.99 1.58-.87 2.51.92.07 1.86-.47 2.44-1.15Z"/></svg>
+          <div>
+            <span class="store__tiny">Download on the</span>
+            <span class="store__big">App Store</span>
+          </div>
+        </a>
+        <a href="#" class="store store--big">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3.6 2.4c-.37.37-.6.94-.6 1.67v15.86c0 .73.23 1.3.6 1.67l.09.08L12 13.36v-.04L3.69 2.33l-.09.07ZM16 9.31 13 12l3 2.69 3.42-1.94c.97-.55.97-1.45 0-2l-3.42-1.44ZM4.46 20l8.01-8-8.01-8v16Z"/></svg>
+          <div>
+            <span class="store__tiny">GET IT ON</span>
+            <span class="store__big">Google Play</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img class="footer__logo" src="assets/landing/logos/logo-mono-white.svg" alt="Partido Sports" />
+        <p class="footer__tag">
+          A community-first football app.<br />
+          Made in Casablanca · للاعبين، مع اللاعبين.
+        </p>
+        <div class="footer__stores">
+          <a href="#" aria-label="App Store"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M16.36 12.86c.02 2.43 2.13 3.23 2.15 3.24-.02.06-.34 1.17-1.13 2.31-.68.99-1.39 1.97-2.5 1.99-1.1.02-1.45-.65-2.7-.65-1.26 0-1.64.63-2.68.67-1.08.04-1.9-1.07-2.58-2.05-1.4-2.02-2.47-5.72-1.03-8.22.71-1.24 1.99-2.02 3.38-2.04 1.05-.02 2.05.71 2.7.71.65 0 1.86-.88 3.14-.75.54.02 2.04.22 3 1.64-.08.05-1.8 1.05-1.75 3.15Zm-2.06-6.16c.57-.69.96-1.65.85-2.6-.83.03-1.82.55-2.42 1.24-.53.6-.99 1.58-.87 2.51.92.07 1.86-.47 2.44-1.15Z"/></svg><span>App Store</span></a>
+          <a href="#" aria-label="Google Play"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M3.6 2.4c-.37.37-.6.94-.6 1.67v15.86c0 .73.23 1.3.6 1.67l8.4-8.24v-.04L3.6 2.4Zm12.4 6.91L13 12l3 2.69 3.42-1.94c.97-.55.97-1.45 0-2l-3.42-1.44Z"/></svg><span>Google Play</span></a>
+        </div>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h5>Product</h5>
+          <ul>
+            <li><a href="#players">For players</a></li>
+            <li><a href="#organizers">For organizers</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#tournaments">Tournaments</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Community</h5>
+          <ul>
+            <li><a href="#">Cities</a></li>
+            <li><a href="#">Organizers programme</a></li>
+            <li><a href="#">Pitches partners</a></li>
+            <li><a href="#">Press kit</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Responsible play</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__meta">
+        <span>© 2026 Partido Sports SARL · Casablanca, Morocco</span>
+        <span class="footer__sep">·</span>
+        <a href="mailto:hello@partido.ma">hello@partido.ma</a>
+      </div>
+      <div class="footer__social" aria-label="Social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M14 4v10a4 4 0 1 1-4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M14 4c.5 3 2.5 4.5 5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="m10 10 5 2-5 2v-4Z" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+
+    <!-- Giant watermark word — quiet, premium -->
+    <div class="footer__wordmark" aria-hidden="true">PARTIDO</div>
+  </footer>
+
+  <script src="assets/landing/script.js" defer></script>
+</body>
+</html>
